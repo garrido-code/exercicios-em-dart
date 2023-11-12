@@ -44,5 +44,5 @@ conversor(){
   final valorconv = double.parse(entradaValores[1]);
   final valorconvertido = double.parse(entradaValores[2]);
   final resultado = valorconv * valorconvertido;
-  print(resultado);
+  print("Seu número é o $valor e o seu valor em conta é $resultado.toStringAsFixed(2) Reais");
 }
