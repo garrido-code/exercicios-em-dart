@@ -19,21 +19,30 @@ Imprima o número e o salário do funcionário, conforme exemplo fornecido, com 
 da igualdade. No caso do salário, também deve haver um espaço em branco após o $.
  */
 
+//Funçaõ inicial 
 main(){
-  print("############ Digite o seu número e o  seu número de horas trabalhadas ##########");
-  final numeroTrabalhador = stdin.readLineSync(); // entrada do número do trabalhador 
-  final horastrabalhadas = stdin.readLineSync(); // entrada de horas do trabalhador 
-  final valorPorhora = stdin.readLineSync();
-  
+ conversor();
+}
+
+//função de entrada de dados
+entrada(){
+  print("############ Digite o seu número e o  seu número de horas trabalhadas ##########");  
+
   print("Digite o seu número de indentificação: ");
-  final valor = double.parse(numeroTrabalhador!);
+  final numeroTrabalhador = stdin.readLineSync(); // entrada do número do trabalhador 
   print("digite suas horas trabalhadas: ");
-  final valorconv = double.parse(horastrabalhadas!);
+  final horastrabalhadas = stdin.readLineSync(); // entrada de horas do trabalhador 
   print("Digite valor por hora: ");
-  final valorconvertido = double.parse(valorPorhora!);
+  final valorPorhora = stdin.readLineSync();
+  return [numeroTrabalhador!, horastrabalhadas!,valorPorhora!];
+}
 
+//função para conversão de valores e tratamento dos dados/soma
+conversor(){
+  List<String> entradaValores = entrada();
+  final valor = double.parse(entradaValores[0]);
+  final valorconv = double.parse(entradaValores[1]);
+  final valorconvertido = double.parse(entradaValores[2]);
   final resultado = valorconv * valorconvertido;
-
   print(resultado);
-
 }
